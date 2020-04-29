@@ -1,11 +1,14 @@
 // burger.js
 import React from "react";
-import { bool, func } from 'prop-types';
+import { bool } from "prop-types";
 import { StyledBurger } from "./Burger.styled";
 
-export function Burger({ open, setOpen }) {
+export function Burger({ open, callbackDispatch }) {
   return (
-    <StyledBurger open={open} onClick={() => setOpen(!open)}>
+    <StyledBurger
+      open={open}
+      onClick={() => callbackDispatch({ type: "toggle" })}
+    >
       <div />
       <div />
       <div />
@@ -14,6 +17,5 @@ export function Burger({ open, setOpen }) {
 }
 
 Burger.propTypes = {
-  open: bool.isRequired,
-  setOpen: func.isRequired
+  open: bool.isRequired
 };

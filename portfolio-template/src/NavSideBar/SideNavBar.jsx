@@ -1,20 +1,14 @@
-import React, { useState, Fragment, useEffect } from "react";
+import React, { useContext, Fragment } from "react";
 import { Burger } from "./Burger";
 import { Menu } from "./Menu";
+import { SideNavDispatch } from "../AppContext";
 
-export function SideNavBar() {
-  const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setOpen(true);
-    }, 600);
-  }, []);
-
+export function SideNavBar(props) {
+  const dispatch = useContext(SideNavDispatch);
   return (
     <Fragment>
-      <Burger open={open} setOpen={setOpen} />
-      <Menu open={open} setOpen={setOpen} />
+      <Burger open={props.open} callbackDispatch={dispatch} />
+      <Menu open={props.open} />
     </Fragment>
   );
 }

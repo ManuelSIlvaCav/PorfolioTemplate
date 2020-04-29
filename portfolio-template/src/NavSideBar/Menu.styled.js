@@ -18,10 +18,9 @@ export const StyledMenu = styled.nav`
   }
 
   a {
-    font-size: 1.5rem;
-    font-family: Montserrat;
-    
-    font-weight: medium;
+    font-size: 1.3rem;
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
     text-transform: uppercase;
     padding: 1rem 0;
     letter-spacing: 0.5rem;
@@ -43,9 +42,8 @@ export const StyledMenu = styled.nav`
     margin-left: auto;
     margin-right: auto;
     width: 200px;
-    height 200px;
     border-radius: 50%;
-    background: ${({ theme }) => theme.primaryDark}
+    background: ${({ theme }) => theme.primaryDark};
   }
 
   .imgAvatar {
@@ -53,6 +51,5 @@ export const StyledMenu = styled.nav`
     height: 100%;
     object-fit: contain;
     border-radius: 50%;
-    
   }
 `;

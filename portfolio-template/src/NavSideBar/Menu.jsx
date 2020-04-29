@@ -16,6 +16,7 @@ export function Menu({ open }) {
         <div className="avatar">
           <img src={avatarImage} alt="text" className="imgAvatar" />
         </div>
+        <br />
         <Fragment>
           <Link to="/">
             <GoHome /> Home
@@ -26,7 +27,9 @@ export function Menu({ open }) {
           <Link to="/resume">
             <IoIosPaper /> Resume
           </Link>
-
+          <Link to="/contact">
+            <IoIosPaper /> Contact
+          </Link>
           <a href="/">
             <span role="img" aria-label="price">
               &#x1f4b8;
